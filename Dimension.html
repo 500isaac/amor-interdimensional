@@ -1,0 +1,142 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>Amor interdimensional 💚🛸</title>  
+  <style>  
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');  
+  
+    * { margin: 0; padding: 0; box-sizing: border-box; }  
+  
+    body {  
+      background: radial-gradient(circle at center, #0b0f18 30%, #000);  
+      color: #00ffe7;  
+      font-family: 'Orbitron', sans-serif;  
+      text-align: center;  
+      overflow: hidden;  
+      height: 100vh;  
+    }  
+  
+    h1 {  
+      margin-top: 60px;  
+      font-size: 1.8em;  
+      color: #39ff14;  
+      text-shadow: 0 0 10px #39ff14, 0 0 30px #0f0;  
+      animation: flicker 2s infinite;  
+    }  
+  
+    p {  
+      margin: 20px;  
+      font-size: 1em;  
+      color: #00ffe7;  
+      text-shadow: 0 0 6px #0ff;  
+    }  
+  
+    .portal {  
+      width: 180px;  
+      height: 180px;  
+      margin: 30px auto;  
+      background: url('portal_converted.gif') no-repeat center;  
+      background-size: cover;  
+      border-radius: 50%;  
+      box-shadow: 0 0 25px #39ff14, 0 0 50px #00ff99;  
+      animation: rotatePortal 10s linear infinite;  
+    }  
+  
+    .image-under-portal {  
+      width: 180px;  
+      height: auto;  
+      margin: 10px auto;  
+      border-radius: 15px;  
+      box-shadow: 0 0 15px #00ffaa;  
+      animation: glow 3s ease-in-out infinite;  
+    }  
+  
+    @keyframes rotatePortal {  
+      0% { transform: rotate(0deg); }  
+      100% { transform: rotate(360deg); }  
+    }  
+  
+    @keyframes glow {  
+      0%, 100% { box-shadow: 0 0 15px #00ffaa; }  
+      50% { box-shadow: 0 0 30px #00ffcc; }  
+    }  
+  
+    @keyframes flicker {  
+      0%, 100% { opacity: 1; }  
+      50% { opacity: 0.8; }  
+    }  
+  
+    .star {  
+      position: absolute;  
+      font-size: 12px;  
+      color: #fff;  
+      animation: fly linear infinite;  
+    }  
+  
+    @keyframes fly {  
+      0% { top: -10px; opacity: 0.8; }  
+      100% { top: 100vh; left: calc(100vw - 100px); opacity: 0; }  
+    }  
+  
+    footer {  
+      position: absolute;  
+      bottom: 10px;  
+      width: 100%;  
+      font-size: 0.75em;  
+      color: #00ffaa;  
+      text-shadow: 0 0 5px #00ffaa;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <h1>Te encontré en mi universo favorito 💚🛸</h1>  
+  <div class="portal"></div>  
+  
+  <!-- 🔄 IMAGEN BAJO EL PORTAL -->  
+  <img src="rickydiane.jpg" alt="Rick y Diane" class="image-under-portal">  
+  
+  <p>Entre miles de realidades...<br>tú eres la única que quiero explorar 🌌</p>  
+  
+  <footer>Tu Rick buscando a su Diane 💘</footer>  
+  
+  <!-- 🎧 VOZ DE RICK -->  
+  <audio id="rickAudio" autoplay>  
+    <source src="https://cdn-2.fakeyou.com/media/g/g/7/v/z/gg7vzhnn6jj7bxtxm9xey0e6agjsyp9h/fakeyou_gg7vzhnn6jj7bxtxm9xey0e6agjsyp9h.wav" type="audio/wav">  
+    Tu navegador no soporta el audio 💔  
+  </audio>  
+
+  <!-- 🎵 NUEVA MÚSICA DE FONDO: Rick and Morty (Archive.org) -->  
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://archive.org/download/tvtunes_27340/Rick%20and%20Morty.mp3" type="audio/mpeg">
+    Tu navegador no soporta la música.
+  </audio>
+  
+  <script>  
+    function createStar() {  
+      const star = document.createElement("div");  
+      star.classList.add("star");  
+      star.innerText = "✨";  
+      star.style.left = Math.random() * 100 + "vw";  
+      star.style.animationDuration = (3 + Math.random() * 3) + "s";  
+      document.body.appendChild(star);  
+      setTimeout(() => star.remove(), 6000);  
+    }  
+  
+    setInterval(createStar, 250);  
+  
+    document.addEventListener("click", () => {  
+      const rickAudio = document.getElementById("rickAudio");  
+      const bgMusic = document.getElementById("bgMusic");  
+  
+      if (rickAudio.paused) {  
+        rickAudio.play().catch(() => {});  
+      }  
+      if (bgMusic.paused) {  
+        bgMusic.play().catch(() => {});  
+      }  
+    });  
+  </script>  
+</body>  
+</html>
